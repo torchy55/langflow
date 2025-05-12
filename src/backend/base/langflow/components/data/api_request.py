@@ -279,8 +279,6 @@ class APIRequestComponent(Component):
 
     def update_build_config(self, build_config: dotdict, field_value: Any, field_name: str | None = None) -> dotdict:
         if field_name == "use_curl":
-
-
             build_config = self._update_curl_mode(build_config, use_curl=field_value)
 
             # Fields that should not be reset
